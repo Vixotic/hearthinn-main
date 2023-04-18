@@ -1,28 +1,31 @@
-<html>
-    <head>
-<title>Hotel Recommender</title>
-    <style type="text/css">
-body {
-  background-image: url('maxresdefault.jpg');
-  background-repeat: no-repeat;
-    background-size: cover
-</style>
-    </head>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Recommender</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/website.css')}}">
+</head>
 <body>
-    
-    <form action="." method="post">
-  <label for="city">City:</label><br>
-  <input type="text" id="city" name="city"><br>
-  <label for="add">Adress:</label><br>
-  <input type="text" id="add" name="add"><br>
-      <label for="nec">Neccesity:</label><br>
-  <input type="text" id="nec" name="nec">  <br>
-        <label for="g">Number of Guests:</label><br>
-  <input type="text" id="g" name="g"><br><br>
-<input type="submit" value="Submit"> 
+    <div class="recommender">
+        <div class="heading">
+            <h2 class="label">Get Recommendations as you want!</h2>
+        </div>
+        <div class="formInput">    
+        <form action="." method="post">
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="city" className="rInput"><br>
+                <label for="add">Adress:</label><br>
+            <input type="text" id="add" name="add" className="rInput"><br>
+                <label for="nec">Neccesity:</label><br>
+            <input type="text" id="nec" name="nec" className="rInput">  <br>
+                <label for="g">Number of Guests:</label><br>
+            <input type="text" id="g" name="g" className="rInput"><br><br>
+        <input type="submit" value="Submit"> 
+        </div>      
+      </form>
+    </div>
         
-</form>
-    
-    </body>
+</body>
 </html>
