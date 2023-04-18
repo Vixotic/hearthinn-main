@@ -20,6 +20,7 @@ import { AuthContext } from "../../context/AuthContext";
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
   const [openDate, setOpenDate] = useState(false);
+  const openLocalHost = () => window.open("http://localhost:5000")
   const [dates, setDates] = useState([
     {
       startDate: new Date(),
@@ -68,7 +69,7 @@ const Header = ({ type }) => {
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faPlane} />
-            <span>Flights</span>
+            <span onClick={() => openLocalHost()}>Recommendations</span>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faCar} />
