@@ -24,4 +24,11 @@
   padding: 5px 10px;
   cursor: pointer;
   color: #003580;
+  border-radius: 5px;
+}
+
+.navButton:hover{
+  color: white;
+  background-color: #003580;
+  transition: 0.4s;
 }

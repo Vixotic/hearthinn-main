@@ -54,6 +54,13 @@
   border: none;
   padding: 10px;
   cursor: pointer;
+  border-radius: 20px;
+}
+
+.headerBtn:hover{
+  background-color: white;
+  color: #0071c2;
+  transition: 0.3s;
 }
 
 .headerSearch {
