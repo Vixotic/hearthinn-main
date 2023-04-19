@@ -12,6 +12,18 @@
   gap: 10px;
 }
 
+.regButton{
+  border: none;
+  border-radius: 10px;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.regButton:hover {
+  background-color: #0095ff;
+}
 .lInput{
   height: 30px;
   padding: 10px;

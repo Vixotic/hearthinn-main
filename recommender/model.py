@@ -113,6 +113,7 @@ def do():
     d1=d1[['hotelname','distance','roomtype_x','address','city','onsiterate','maxoccupancy']].head(5)
     html=d1.to_html()
     text_file = open("templates\ind.html", "w")
+    text_file.write('''<link rel="stylesheet" href="{{url_for('static',filename='styles/result.css')}}">''')
     text_file.write(html)
     text_file.close()
     return render_template("ind.html")

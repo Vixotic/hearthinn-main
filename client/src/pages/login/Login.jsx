@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./login.css";
 
+const openRegister = () => window.open("http://localhost:3000/register")
 const Login = () => {
   const [credentials, setCredentials] = useState({
     username: undefined,
@@ -51,6 +52,7 @@ const Login = () => {
         <button disabled={loading} onClick={handleClick} className="lButton">
           Login
         </button>
+        <h5 className="userM">Not a user?<button className="regButton" onClick={() => openRegister()}>Register Now!</button></h5>
         {error && <span>{error.message}</span>}
       </div>
     </div>

@@ -25,7 +25,16 @@
 .headerListItem {
   display: flex;
   align-items: center;
+  width: fit-content;
   gap: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+.headerListItem:hover {
+  background-color: white;
+  color: #003580;
 }
 
 .headerListItem.active {
