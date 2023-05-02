@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-
+import { jsPDF } from "jspdf";
 import "./reserve.css";
 import useFetch from "../../hooks/useFetch";
 import { useContext, useState } from "react";
 import { SearchContext } from "../../context/SearchContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
@@ -49,7 +50,10 @@ const Reserve = ({ setOpen, hotelId }) => {
     );
   };
 
+  console.log(selectedRooms)
+
   const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
 
   const handleClick = async () => {
     try {
@@ -58,18 +62,24 @@ const Reserve = ({ setOpen, hotelId }) => {
           const res = axios.put(`/rooms/availability/${roomId}`, {
             dates: alldates,
           });
-          alert("Rooms reserved successfully\nThank you for using HearthInn!");
+          var message = "Thank You for Using HearthInn!\n";
+          message += "Room number: " + JSON.stringify(selectedRooms.map.number) + " have been booked from \n" + JSON.stringify(dates[0].startDate+1) + "\nto  " + JSON.stringify(dates[0].endDate+1) + '\nby  ' + JSON.stringify(user.username) + "\n \n \n \n To be paid at the venue";
+          alert(message);
+          var savedMessage = message;
+          var doc = new jsPDF();
+          doc.text(savedMessage, 10, 10);
+          doc.save("message.pdf");
           return res.data;
         })
       );
 
     // const totalNights = alldates.length;
-    // const totalPrice = selectedRoomDetails.reduce(
+    // const totalPrice = selectedRooms.reduce(
     //   (acc, room) => acc + room.price,
     //   0
     // );
 
-    // const reservedRooms = selectedRoomDetails.map((room) => ({
+    // const reservedRooms = selectedRooms.map((room) => ({
     //   roomNumber: room.roomNumber.number,
     //   price: room.price,
     //   nights: totalNights,
@@ -81,7 +91,7 @@ const Reserve = ({ setOpen, hotelId }) => {
   };
   return (
     <div className="reserve">
-      <div className="rContainer">
+      <div className="reContainer">
         <FontAwesomeIcon
           icon={faCircleXmark}
           className="rClose"

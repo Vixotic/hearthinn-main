@@ -3,13 +3,15 @@ import { useContext, useState } from "react";
 import { SearchContext } from "../../context/SearchContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { reservedRooms, totalPrice } from "../../components/reserve"
+import { reservedRooms, totalPrice, alldate } from "../../components/reserve"
+import { AuthContext } from "../../context/AuthContext";
 import "./bill.css";
 
 const Bill = ({ reservedRooms, totalPrice }) => {
     return (
       <div className="bill">
         <h2>Reservation Details</h2>
+        { user }
         <table>
           <thead>
             <tr>
