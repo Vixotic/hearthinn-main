@@ -33,6 +33,11 @@ const Login = () => {
 
 
   return (
+    <div className="container">
+    <div className="header-banner">
+      <span className="logo">HearthInn</span>
+      <span className="banner">Get rewarded for your travels – unlock instant savings of 10% or more with a free HearthInn account</span>
+    </div>
     <div className="login">
       <div className="lContainer">
         <input
@@ -55,6 +60,7 @@ const Login = () => {
         <h5 className="userM">Not a user?<button className="regButton" onClick={() => openRegister()}>Register Now!</button></h5>
         {error && <span>{error.message}</span>}
       </div>
+    </div>
     </div>
   );
 };

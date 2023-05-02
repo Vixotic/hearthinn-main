@@ -1,26 +1,28 @@
 .register {
-  height: 100vh;
+  height: 850px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0071c25e;
+  background-color: #ffffff67;
 }
 
-.lContainer {
+.rContainer {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  width: 300px;
+  background-color: #003580;
+  height: auto;
+  padding: 50px 50px;
+  border-radius:20px;
+  box-shadow: 4px 7px 16px 1px rgba(0,0,0,0.71);
+-webkit-box-shadow: 4px 7px 16px 1px rgba(0,0,0,0.71);
+-moz-box-shadow: 4px 7px 16px 1px rgba(0,0,0,0.71);
+  gap: 10px;
 }
 
 .lInput{
   height: 30px;
   padding: 10px;
   border-radius: 15px;
-  box-shadow: 19px 31px 18px -12px rgba(213,213,213,0.65);
--webkit-box-shadow: 19px 31px 18px -12px rgba(213,213,213,0.65);
--moz-box-shadow: 19px 31px 18px -12px rgba(213,213,213,0.65);
-    border: none;
 }
 
 .lButton {
@@ -36,4 +38,13 @@
 .lButton:disabled{
   background-color: #0071c28c;
   cursor: not-allowed;
+}
+
+.header-banner{
+  height: 200px;
+  background-color: #003580;
+  display: flex;
+  border: 1px solid #f4c50a00;
+  border-bottom: #ffcc00;
+  flex-direction: column;
 }

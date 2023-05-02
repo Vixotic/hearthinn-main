@@ -58,9 +58,23 @@ const Reserve = ({ setOpen, hotelId }) => {
           const res = axios.put(`/rooms/availability/${roomId}`, {
             dates: alldates,
           });
+          alert("Rooms reserved successfully\nThank you for using HearthInn!");
           return res.data;
         })
       );
+
+    // const totalNights = alldates.length;
+    // const totalPrice = selectedRoomDetails.reduce(
+    //   (acc, room) => acc + room.price,
+    //   0
+    // );
+
+    // const reservedRooms = selectedRoomDetails.map((room) => ({
+    //   roomNumber: room.roomNumber.number,
+    //   price: room.price,
+    //   nights: totalNights,
+    // }));
+
       setOpen(false);
       navigate("/");
     } catch (err) {}

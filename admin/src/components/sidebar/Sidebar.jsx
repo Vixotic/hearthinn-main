@@ -18,6 +18,7 @@ import { useContext } from "react";
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
   return (
+    
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
@@ -84,7 +85,7 @@ const Sidebar = () => {
           </li>
           <li>
             <ExitToAppIcon className="icon" />
-            <span>Logout</span>
+            <button id="logoutBtn" onClick={()=>console.log("ho rha hai")}>Logout</button>
           </li>
         </ul>
       </div>

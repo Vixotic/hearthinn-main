@@ -1,15 +1,22 @@
 .login {
-  height: 100vh;
+  height: 850px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0071c267;
+  background-color: #ffffff67;
 }
 
 .lContainer {
   display: flex;
   flex-direction: column;
+  background-color: #003580;
+  height: 200px;
+  padding: 85px 20px;
+  border-radius:20px;
   gap: 10px;
+  box-shadow: 4px 7px 16px 1px rgba(0,0,0,0.71);
+-webkit-box-shadow: 4px 7px 16px 1px rgba(0,0,0,0.71);
+-moz-box-shadow: 4px 7px 16px 1px rgba(0,0,0,0.71);
 }
 
 .regButton{
@@ -42,4 +49,39 @@
 .lButton:disabled{
   background-color: #0071c28c;
   cursor: not-allowed;
+}
+
+.header-banner{
+  height: 200px;
+  background-color: #003580;
+  display: flex;
+  border: 1px solid #f4c50a00;
+  border-bottom: #ffcc00;
+  flex-direction: column;
+}
+
+.header-banner .logo{
+  font-size: 50px;
+  display: flex;
+  top: 50px;
+  left: 30px;
+  color: #fff;
+  position: relative;
+}
+
+.header-banner .banner{
+  font-size: 30px;
+  display: flex;  
+  top: 70px;
+  left: 30px;
+  color: #fff;
+  position: relative;
+}
+
+.userM{
+  color: #fff;
+}
+
+.regButton{
+  color: #fff;
 }
