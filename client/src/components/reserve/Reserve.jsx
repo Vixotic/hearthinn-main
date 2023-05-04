@@ -63,7 +63,7 @@ const Reserve = ({ setOpen, hotelId }) => {
             dates: alldates,
           });
           var message = "Thank You for Using HearthInn!\n";
-          message += "Room number: " + JSON.stringify(selectedRooms.map.number) + " have been booked from \n" + JSON.stringify(dates[0].startDate+1) + "\nto  " + JSON.stringify(dates[0].endDate+1) + '\nby  ' + JSON.stringify(user.username) + "\n \n \n \n To be paid at the venue";
+          message += "Room number: " + JSON.stringify(selectedRooms) + " have been booked from \n" + JSON.stringify(dates[0].startDate+1) + "\nto  " + JSON.stringify(dates[0].endDate+1) + '\nby  ' + JSON.stringify(user.username) + "\n \n \n \n To be paid at the venue";
           alert(message);
           var savedMessage = message;
           var doc = new jsPDF();
@@ -114,7 +114,7 @@ const Reserve = ({ setOpen, hotelId }) => {
                   <label>{roomNumber.number}</label>
                   <input
                     type="checkbox"
-                    value={roomNumber._id}
+                    value={roomNumber.number}
                     onChange={handleSelect}
                     disabled={!isAvailable(roomNumber)}
                   />

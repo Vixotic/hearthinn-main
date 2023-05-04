@@ -51,7 +51,7 @@ export const login = async (req, res, next) => {
 export const logout = async (req, res, next) => {
   try {
     app.get('/logout', (req,res) => {
-      res.clearCookie('nToken');
+      res.clearCookie("access_token");
       return res.redirect('/');
     })
   } catch (err) {
