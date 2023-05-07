@@ -61,6 +61,13 @@ const Register = () => {
           className="lInput"
         />
         <input
+          type="email"
+          placeholder="email"
+          id="fullname"
+          onChange={handleChange}
+          className="lInput"
+        />
+        <input
           type="text"
           placeholder="city"
           id="city"
